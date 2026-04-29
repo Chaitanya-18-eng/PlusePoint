@@ -87,6 +87,17 @@ Sensitive credentials like `service-account.json` and local environment files ar
 
 ---
 
+## 📈 Future Roadmap (Scaling)
+
+To take PulsePoint from a localized hackathon prototype to a global health intelligence network, we are focusing on:
+
+- **🤖 AI-Driven Prediction**: Implementing Generative AI (Gemini) to forecast outbreak trajectories based on historical patterns and current environmental shifts.
+- **⌚ IoT & Wearable Integration**: Directly ingesting data from health wearables to detect "micro-pulses" of fever or respiratory distress at the individual level.
+- **🌍 Global Node Protocol**: Enabling decentralized data sharing between regional authorities using a standardized health-intelligence protocol.
+- **🛡️ Blockchain Data Integrity**: Ensuring all surveillance data remains tamper-proof and cryptographically verifiable.
+
+---
+
 ## 📄 License
 
 This project is developed as part of the **Pragyantra Hackathon**. All rights reserved.
