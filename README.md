@@ -6,7 +6,7 @@
 
 ## ✨ Key Features
 
-- **🏥 Neuralis Health Monitor**: A high-fidelity dashboard for tracking regional health anomalies and "pulse" velocity.
+- **🏥 Health Monitor**: A high-fidelity dashboard for tracking regional health anomalies and "pulse" velocity.
 - **🌩️ Environmental Risk Intelligence**: Real-time integration with OpenWeather to calculate climate-driven health risks (respiratory, vector-borne, and thermal stress).
 - **🛰️ Authority Command Center**: Interactive map overlays using `flutter_map` for geographic outbreak visualization and management.
 - **🧪 PulseVelocity Engine**: A multi-pillar scoring logic that synthesizes pharmacy sales data, search intent, and environmental metrics.
@@ -92,12 +92,6 @@ Sensitive credentials like `service-account.json` and local environment files ar
 To take PulsePoint from a localized hackathon prototype to a global health intelligence network, we are focusing on:
 
 - **🤖 AI-Driven Prediction**: Implementing Generative AI (Gemini) to forecast outbreak trajectories based on historical patterns and current environmental shifts.
-- **⌚ IoT & Wearable Integration**: Directly ingesting data from health wearables to detect "micro-pulses" of fever or respiratory distress at the individual level.
 - **🌍 Global Node Protocol**: Enabling decentralized data sharing between regional authorities using a standardized health-intelligence protocol.
-- **🛡️ Blockchain Data Integrity**: Ensuring all surveillance data remains tamper-proof and cryptographically verifiable.
 
 ---
-
-## 📄 License
-
-This project is developed as part of the **Pragyantra Hackathon**. All rights reserved.
