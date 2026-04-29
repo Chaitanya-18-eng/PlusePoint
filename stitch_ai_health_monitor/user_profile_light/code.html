@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-primary": "#006d36",
+                        "surface-container-highest": "#353436",
+                        "surface-container-low": "#F4F4F5",
+                        "on-primary-fixed": "#00210c",
+                        "surface": "#FFFFFF",
+                        "primary-container": "#4ade80",
+                        "on-secondary": "#402d00",
+                        "on-tertiary-fixed": "#410006",
+                        "surface-container-high": "#E5E7EB",
+                        "tertiary-fixed": "#ffdad8",
+                        "error-container": "#93000a",
+                        "secondary-fixed": "#ffdf9f",
+                        "inverse-on-surface": "#313031",
+                        "outline": "#869486",
+                        "on-tertiary": "#670211",
+                        "on-surface": "#131314",
+                        "on-primary-container": "#005e2d",
+                        "surface-container": "#FAFAFA",
+                        "on-error-container": "#ffdad6",
+                        "surface-dim": "#F4F4F5",
+                        "surface-bright": "#FFFFFF",
+                        "secondary-fixed-dim": "#f9bd22",
+                        "on-tertiary-container": "#96282d",
+                        "on-primary-fixed-variant": "#005227",
+                        "on-secondary-fixed-variant": "#5c4300",
+                        "on-primary": "#003919",
+                        "surface-tint": "#4de082",
+                        "tertiary-container": "#ffb0ad",
+                        "secondary-container": "#e3aa00",
+                        "background": "#FFFFFF",
+                        "primary-fixed": "#6dfe9c",
+                        "on-secondary-container": "#5a4100",
+                        "outline-variant": "#3d4a3e",
+                        "surface-variant": "#F4F4F5",
+                        "secondary": "#ffc640",
+                        "on-background": "#131314",
+                        "tertiary": "#ffd7d5",
+                        "on-tertiary-fixed-variant": "#881d24",
+                        "primary-fixed-dim": "#4de082",
+                        "surface-container-lowest": "#FFFFFF",
+                        "inverse-surface": "#e5e2e3",
+                        "error": "#ffb4ab",
+                        "on-surface-variant": "#3d4a3e",
+                        "tertiary-fixed-dim": "#ffb3b0",
+                        "primary": "#4ADE80",
+                        "on-error": "#690005",
+                        "on-secondary-fixed": "#261a00"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Space Grotesk"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { background-color: #FFFFFF; color: #131314; font-family: 'Inter', sans-serif; }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white text-emerald-600 font-['Inter'] tracking-tight border-b border-zinc-100 shadow-[0_4px_20px_rgba(0,0,0,0.04)] flex justify-between items-center px-6 py-4 max-w-full">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-emerald-600" data-icon="security">security</span>
+<div class="flex flex-col">
+<span class="text-lg font-bold tracking-[0.05em] uppercase text-zinc-900">Neuralis Sentinel</span>
+<span class="font-label text-[10px] tracking-widest text-zinc-500 uppercase">CENTRAL_DISTRICT_V01</span>
+</div>
+</div>
+<div class="cursor-pointer active:scale-95 bg-emerald-50 text-[10px] font-bold tracking-widest text-emerald-700 px-3 py-1 rounded border border-emerald-100">
+        ADMIN
+    </div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-2xl mx-auto space-y-8">
+<!-- User Identity Header -->
+<section class="flex items-center gap-6 p-6 rounded-xl bg-surface-container-low border border-outline-variant/10">
+<div class="w-20 h-20 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container text-2xl font-bold tracking-tighter">
+            JD
+        </div>
+<div class="space-y-1">
+<h1 class="text-2xl font-extrabold tracking-tight text-on-surface">Jane Doe</h1>
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm opacity-60" data-icon="clinical_notes">clinical_notes</span>
+<span class="font-label text-xs uppercase tracking-wider text-on-surface-variant">Age Bracket: 20-30</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm opacity-60" data-icon="location_on">location_on</span>
+<span class="font-label text-xs uppercase tracking-wider text-on-surface-variant">Primary Region: Pune-Kothrud</span>
+</div>
+</div>
+</div>
+</section>
+<!-- System Theme Toggle -->
+<section class="bg-surface-container p-6 rounded-xl border border-outline-variant/5">
+<div class="flex justify-between items-center">
+<div class="space-y-1">
+<h3 class="text-sm font-bold uppercase tracking-widest font-label">Interface Mode</h3>
+<p class="text-xs text-on-surface-variant">Switch between High-Contrast and Surveillance Dark</p>
+</div>
+<div class="relative w-32 h-10 bg-surface-container-high rounded-full p-1 flex items-center cursor-pointer">
+<!-- Light Position -->
+<div class="absolute left-1 w-15 h-8 bg-white shadow-sm rounded-full flex items-center justify-center gap-2 px-3 z-10 border border-zinc-100">
+<span class="material-symbols-outlined text-sm text-amber-500" data-icon="light_mode">light_mode</span>
+<span class="font-label text-[10px] font-bold">LIGHT</span>
+</div>
+<div class="w-full flex justify-end px-4">
+<span class="material-symbols-outlined text-sm text-on-surface-variant opacity-40" data-icon="dark_mode">dark_mode</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Alert History Timeline -->
+<section class="space-y-6">
+<div class="flex items-center justify-between">
+<h2 class="text-lg font-bold tracking-tight">Alert History</h2>
+<span class="font-label text-[10px] uppercase tracking-widest px-2 py-1 bg-surface-container-high rounded">Archived Readouts</span>
+</div>
+<div class="space-y-4 relative before:absolute before:left-4 before:top-2 before:bottom-2 before:w-[1px] before:bg-outline-variant/20">
+<!-- High Alert -->
+<div class="relative pl-10">
+<div class="absolute left-2.5 top-3 w-3 h-3 rounded-full bg-on-tertiary-container ring-4 ring-white"></div>
+<div class="bg-surface-container-low p-4 rounded-xl border-l-4 border-on-tertiary-container shadow-sm">
+<div class="flex justify-between items-start mb-2">
+<h4 class="font-bold text-on-surface">Dengue Advisory - Oct 2024</h4>
+<span class="font-label text-[10px] text-on-tertiary-container font-bold px-2 py-0.5 bg-on-tertiary-container/10 rounded">CRITICAL</span>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed">System-wide intercept triggered by localized vector density spike. Precautions mandatory.</p>
+</div>
+</div>
+<!-- Medium Alert -->
+<div class="relative pl-10">
+<div class="absolute left-2.5 top-3 w-3 h-3 rounded-full bg-secondary-container ring-4 ring-white"></div>
+<div class="bg-surface-container-low p-4 rounded-xl border-l-4 border-secondary-container shadow-sm">
+<div class="flex justify-between items-start mb-2">
+<h4 class="font-bold text-on-surface">Viral Fever Pulse - Sept 2024</h4>
+<span class="font-label text-[10px] text-secondary-container font-bold px-2 py-0.5 bg-secondary-container/10 rounded">WATCHFUL</span>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed">Seasonal drift detected in regional biometrics. Symptomatic monitoring recommended.</p>
+</div>
+</div>
+<!-- Low Alert / Success -->
+<div class="relative pl-10">
+<div class="absolute left-2.5 top-3 w-3 h-3 rounded-full bg-primary ring-4 ring-white"></div>
+<div class="bg-surface-container-low p-4 rounded-xl border-l-4 border-primary shadow-sm">
+<div class="flex justify-between items-start mb-2">
+<h4 class="font-bold text-on-surface">Seasonal Sync Complete - Aug 2024</h4>
+<span class="font-label text-[10px] text-primary-container font-bold px-2 py-0.5 bg-primary/10 rounded">STABLE</span>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed">Baseline biometrics cleared. No regional anomalies detected for the period.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Security Section -->
+<section class="p-6 rounded-xl border flex gap-4 items-start shadow-xl bg-white border-outline-variant/10">
+<span class="material-symbols-outlined mt-1 text-primary" data-icon="verified_user">verified_user</span>
+<div class="space-y-1">
+<h3 class="text-xs font-bold uppercase tracking-widest font-label text-primary">Security Protocol Alpha</h3>
+<p class="text-xs leading-relaxed font-body text-on-surface-variant">
+                DPDP Act COMPLIANT: Your data is anonymized and stored locally for your safety. Neuralis encryption ensures zero-knowledge processing of personal biometric identifiers.
+            </p>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 rounded-t-2xl bg-white backdrop-blur-xl border-t border-zinc-100 shadow-[0_-4px_20px_rgba(0,0,0,0.04)] flex justify-around items-center h-20 pb-safe">
+<button class="flex flex-col items-center justify-center text-zinc-400 px-6 py-2 hover:bg-zinc-50 transition-all">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-['Space_Grotesk'] text-[10px] uppercase tracking-widest">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center text-zinc-400 px-6 py-2 hover:bg-zinc-50 transition-all">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span class="font-['Space_Grotesk'] text-[10px] uppercase tracking-widest">Map</span>
+</button>
+<button class="flex flex-col items-center justify-center text-emerald-600 rounded-xl px-6 py-2 transition-all">
+<span class="material-symbols-outlined" data-icon="account_circle" style="font-variation-settings: 'FILL' 1;">account_circle</span>
+<span class="font-['Space_Grotesk'] text-[10px] uppercase tracking-widest font-bold">Profile</span>
+</button>
+</nav>
+</body></html>

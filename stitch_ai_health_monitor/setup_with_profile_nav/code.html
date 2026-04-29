@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface": "#FFFFFF",
+                        "tertiary-container": "#ffdad9",
+                        "on-surface": "#1A1A1A",
+                        "surface-dim": "#f8f9fa",
+                        "on-secondary-container": "#261a00",
+                        "tertiary-fixed-dim": "#ffb3b0",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed": "#00210c",
+                        "surface-variant": "#f0f2f0",
+                        "surface-tint": "#006d36",
+                        "outline-variant": "#d1d5db",
+                        "background": "#FFFFFF",
+                        "on-secondary-fixed-variant": "#5c4300",
+                        "surface-container": "#E8F5EE",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed": "#ffdf9f",
+                        "on-background": "#1A1A1A",
+                        "on-surface-variant": "#374151",
+                        "on-primary-container": "#ffffff",
+                        "on-secondary-fixed": "#261a00",
+                        "surface-bright": "#ffffff",
+                        "on-primary-fixed-variant": "#005227",
+                        "surface-container-high": "#D1E9DC",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-container": "#410006",
+                        "on-error-container": "#410002",
+                        "secondary": "#e3aa00",
+                        "inverse-primary": "#6bfb9a",
+                        "error": "#ba1a1a",
+                        "inverse-on-surface": "#f2f0f1",
+                        "secondary-container": "#ffdf9f",
+                        "primary-fixed": "#6dfe9c",
+                        "surface-container-low": "#F0F9F4",
+                        "on-error": "#ffffff",
+                        "secondary-fixed-dim": "#f9bd22",
+                        "primary-container": "#006d36",
+                        "outline": "#71717a",
+                        "on-tertiary-fixed-variant": "#881d24",
+                        "primary": "#006d36",
+                        "tertiary-fixed": "#ffdad8",
+                        "surface-container-highest": "#C2E2D1",
+                        "on-primary": "#ffffff",
+                        "inverse-surface": "#313031",
+                        "primary-fixed-dim": "#4de082",
+                        "tertiary": "#9c4245",
+                        "on-tertiary-fixed": "#410006",
+                        "on-tertiary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Space Grotesk"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-white text-on-surface font-body selection:bg-primary/10">
+<!-- Top Navigation Shell -->
+<header class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-xl border-b border-neutral-100 flex justify-between items-center px-6 h-16 w-full">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="sensors">sensors</span>
+<span class="font-['Space_Grotesk'] font-bold text-on-surface tracking-tighter text-lg uppercase">CENTRAL_DISTRICT_V01</span>
+</div>
+<div class="w-8 h-8 rounded-full overflow-hidden border border-neutral-200 bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="close-up portrait of a tech-focused professional user with clean lighting and clinical dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAd_qICATrNGmMjSF2iiWr9zWP5suzEwsJ3tv3VzfPA9jayoflEAZU2M6OEQG5YooT_at-FdchZza8N0iCliV1nHbils5rmm2S82WkqW9Cj6aZQ6evH5TW7wzxQJZm_g6Sd6ot-UM9NGx8oPpzs1988J-wWC08wz6-_NQqCi1SkEJe5GedNaZzTqN18I4GXHCIoqmIaMtoNV0lfgXU46xPMrTxbfJ29QbBhp18Y2f6fqov6SLcA_SXYnzSwqRFBZpFeKU1iV1NO73P1"/>
+</div>
+</header>
+<main class="min-h-screen pt-24 pb-32 px-6 max-w-4xl mx-auto">
+<!-- Header Section -->
+<section class="mb-12">
+<div class="flex items-center gap-3 mb-2">
+<span class="font-label text-primary uppercase tracking-[0.2em] text-[10px]">Step 02/04</span>
+<div class="h-[1px] w-12 bg-primary/20"></div>
+</div>
+<h1 class="text-4xl font-headline font-bold tracking-tight mb-4 text-on-surface">Biometric Parameters</h1>
+<p class="text-on-surface-variant max-w-md font-body leading-relaxed">Calibrate the neural observer by defining your demographic segment and spatial coordinates.</p>
+</section>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Part 1: Age Group Selection (Bento Card) -->
+<div class="md:col-span-12 bg-surface-container-low rounded-xl p-8 border border-primary/10 relative overflow-hidden group shadow-sm">
+<div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-primary to-transparent"></div>
+<div class="flex justify-between items-end mb-10">
+<div>
+<h2 class="font-headline font-semibold text-xl mb-1 text-on-surface">Age Cohort</h2>
+<span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant">Binned Demographic Data</span>
+</div>
+<div class="text-right">
+<span class="font-headline text-3xl font-bold text-primary tracking-tighter">20–30</span>
+<p class="font-label text-[10px] uppercase text-on-surface-variant">Selected Range</p>
+</div>
+</div>
+<!-- Horizontal Picker -->
+<div class="relative py-6">
+<div class="flex items-center justify-between no-scrollbar overflow-x-auto gap-4 pb-4">
+<!-- Age Bins -->
+<div class="flex-shrink-0 px-8 py-4 rounded-xl border border-primary/10 bg-white text-on-surface-variant font-label text-sm transition-all duration-300 hover:border-primary/30">10–20</div>
+<div class="flex-shrink-0 px-8 py-4 rounded-xl border border-primary/40 bg-primary/10 text-primary font-label text-sm shadow-[0_0_20px_rgba(0,109,54,0.05)] ring-1 ring-primary/20">20–30</div>
+<div class="flex-shrink-0 px-8 py-4 rounded-xl border border-primary/10 bg-white text-on-surface-variant font-label text-sm transition-all duration-300 hover:border-primary/30">30–40</div>
+<div class="flex-shrink-0 px-8 py-4 rounded-xl border border-primary/10 bg-white text-on-surface-variant font-label text-sm transition-all duration-300 hover:border-primary/30">40–50</div>
+<div class="flex-shrink-0 px-8 py-4 rounded-xl border border-primary/10 bg-white text-on-surface-variant font-label text-sm transition-all duration-300 hover:border-primary/30">50–60+</div>
+</div>
+<!-- Selection Indicator -->
+<div class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-primary shadow-[0_0_8px_rgba(0,109,54,0.4)]"></div>
+</div>
+</div>
+<!-- Part 2: Locality Setup (Asymmetric Grid) -->
+<div class="md:col-span-7 bg-surface-container-low rounded-xl p-8 border border-primary/10 flex flex-col justify-between min-h-[400px] shadow-sm">
+<div>
+<h2 class="font-headline font-semibold text-xl mb-1 text-on-surface">Spatial Context</h2>
+<span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant">Geographic Surveillance Root</span>
+<div class="mt-8 space-y-6">
+<button class="w-full py-4 px-6 rounded-xl font-headline font-bold flex items-center justify-center gap-3 transition-all active:scale-[0.98] hover:shadow-[0_8px_24px_rgba(0,109,54,0.2)] bg-[#4ADE80] text-[#122017] hover:bg-[#42c974]">
+<span class="material-symbols-outlined text-lg" data-icon="my_location">my_location</span>
+                            Allow Locality Detection
+                        </button>
+<div class="relative group">
+<label class="block font-label text-[10px] uppercase text-on-surface-variant mb-2 ml-1">Manual Selection</label>
+<div class="relative">
+<select class="w-full bg-white border-primary/10 border rounded-xl py-4 px-5 text-on-surface font-body focus:ring-1 focus:ring-primary focus:border-primary appearance-none cursor-pointer">
+<option>Pune-Kothrud</option>
+<option>Mumbai-Bandra</option>
+<option>Bangalore-Indiranagar</option>
+<option>Delhi-Hauz Khas</option>
+</select>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-primary/60 pointer-events-none" data-icon="keyboard_arrow_down">keyboard_arrow_down</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-8 p-4 bg-white/50 rounded-lg border border-primary/10">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-sm mt-0.5" data-icon="info">info</span>
+<p class="text-xs text-on-surface-variant leading-relaxed">Providing locality data allows for comparative neural benchmarks against regional demographics.</p>
+</div>
+</div>
+</div>
+<!-- Stylized Map (Visual Secondary Card) -->
+<div class="md:col-span-5 bg-surface-container-low rounded-xl overflow-hidden border border-primary/10 relative group h-[400px] shadow-sm">
+<div class="absolute inset-0 z-0 opacity-40 grayscale group-hover:grayscale-0 group-hover:opacity-60 transition-all duration-700 scale-110 group-hover:scale-100">
+<img class="w-full h-full object-cover" data-alt="abstract light monochromatic map of urban city streets with subtle glowing emerald data points and digital grid lines" data-location="Pune" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDv3qOUTsseXbBBpQj9HelYz-vaSupGx7tp8_ttJhXmaJtWZ721mNWq4jfrYtFaMjDHBa0txZDxVY2YTvVPMgu-5YxiqTWoVrShSHfIVLeKCNsYjXMcopuyJitiXU9RU7ETxSxYapQtjtkbhq3_sIUoufLWtYq61wNzpxUeAqkasZFTZdI2vV1khfLqAJ8qG73MYdaOo9kDfU0NSqe3w-0v7nizutMak5Xh12eV5GAnrD6MygNK0XRNUX8GYySZeAA_oqXF3qxggLi1"/>
+</div>
+<!-- Scanning Overlay -->
+<div class="absolute inset-0 z-10 bg-gradient-to-t from-surface-container-low via-transparent to-transparent"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 flex flex-col items-center">
+<div class="w-24 h-24 rounded-full border border-primary/30 flex items-center justify-center bg-white/60 backdrop-blur-sm relative">
+<div class="absolute inset-0 rounded-full border border-primary/40 animate-ping"></div>
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="location_on" data-weight="fill" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+<span class="mt-4 font-label text-[10px] uppercase tracking-[0.3em] text-primary bg-white/90 px-4 py-2 rounded-full backdrop-blur-md border border-primary/10 shadow-sm">Scanning Grid...</span>
+</div>
+<div class="absolute bottom-6 left-6 right-6 z-20">
+<div class="glass-panel p-4 rounded-xl border border-primary/10 shadow-lg">
+<div class="flex justify-between items-center">
+<span class="font-label text-[10px] uppercase text-on-surface font-semibold">Coordinate Alpha</span>
+<span class="font-label text-[10px] text-primary font-bold">18.5204° N, 73.8567° E</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer Action -->
+<div class="mt-12 flex justify-end gap-4">
+<button class="px-8 py-3 rounded-xl border border-primary/10 text-on-surface-variant font-headline font-semibold hover:bg-surface-container-low transition-colors">
+                Back
+            </button>
+<button class="px-10 py-3 rounded-xl font-headline font-bold shadow-[0_8px_24px_rgba(0,109,54,0.2)] transition-all active:scale-95 bg-[#4ADE80] text-[#122017] hover:bg-[#42c974]">
+                Continue Configuration
+            </button>
+</div>
+</main>
+<!-- Navigation Shell - Bottom Bar -->
+<nav class="fixed bottom-0 w-full z-50 rounded-t-xl bg-white/90 backdrop-blur-2xl border-t border-gray-200/10 flex justify-around items-center px-4 py-3 pb-safe shadow-[0_-4px_40px_rgba(0,0,0,0.04)] h-20">
+<div class="flex flex-col items-center justify-center text-neutral-400 hover:text-[#4ADE80] transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-2xl" data-icon="home">home</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#4ADE80] bg-[#4ADE80]/10 rounded-full w-12 h-12 shadow-inner">
+<span class="material-symbols-outlined text-2xl" data-icon="distance">distance</span>
+</div>
+<div class="flex flex-col items-center justify-center text-neutral-400 hover:text-[#4ADE80] transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-2xl" data-icon="notifications_active">notifications_active</span>
+</div>
+<div class="flex flex-col items-center justify-center text-neutral-400 hover:text-[#4ADE80] transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-2xl" data-icon="person">person</span>
+</div>
+</nav>
+</body></html>

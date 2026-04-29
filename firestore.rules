@@ -1,0 +1,22 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // PUBLIC: Anyone can read regional health status
+    match /regional_status/{region} {
+      allow read: if true;
+      allow write: if false; // Only Cloud Functions can write here
+    }
+
+    // USER PROFILE: Users can only see their own private history
+    match /user_metadata/{userId} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+
+    // AUTHORITY: Only users with the 'hca' claim can see inventory & triage
+    match /authority_dashboard/{data} {
+      allow read: if request.auth.token.role == 'hca';
+      allow write: if request.auth.token.role == 'hca';
+    }
+  }
+}

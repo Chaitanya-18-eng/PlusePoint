@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Space_Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-primary": "#006d36",
+                        "surface-container-highest": "#e5e2e3",
+                        "surface-container-low": "#f4f4f4",
+                        "on-primary-fixed": "#00210c",
+                        "surface": "#ffffff",
+                        "primary-container": "#4ade80",
+                        "on-secondary": "#402d00",
+                        "on-tertiary-fixed": "#410006",
+                        "surface-container-high": "#ebe9ea",
+                        "tertiary-fixed": "#ffdad8",
+                        "error-container": "#93000a",
+                        "secondary-fixed": "#ffdf9f",
+                        "inverse-on-surface": "#313031",
+                        "outline": "#707970",
+                        "on-tertiary": "#ffffff",
+                        "on-surface": "#1c1b1c",
+                        "on-primary-container": "#005e2d",
+                        "surface-container": "#f0eff0",
+                        "on-error-container": "#410002",
+                        "surface-dim": "#ded9d9",
+                        "surface-bright": "#fcf8f8",
+                        "secondary-fixed-dim": "#f9bd22",
+                        "on-tertiary-container": "#96282d",
+                        "on-primary-fixed-variant": "#005227",
+                        "on-secondary-fixed-variant": "#5c4300",
+                        "on-primary": "#ffffff",
+                        "surface-tint": "#006d36",
+                        "tertiary-container": "#ffb0ad",
+                        "secondary-container": "#e3aa00",
+                        "background": "#ffffff",
+                        "primary-fixed": "#6dfe9c",
+                        "on-secondary-container": "#5a4100",
+                        "outline-variant": "#c0ccc0",
+                        "surface-variant": "#dee5de",
+                        "secondary": "#765b00",
+                        "on-background": "#1c1b1c",
+                        "tertiary": "#904a48",
+                        "on-tertiary-fixed-variant": "#881d24",
+                        "primary-fixed-dim": "#4de082",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-surface": "#313031",
+                        "error": "#ba1a1a",
+                        "on-surface-variant": "#404941",
+                        "tertiary-fixed-dim": "#ffb3b0",
+                        "primary": "#006d36",
+                        "on-error": "#ffffff",
+                        "on-secondary-fixed": "#261a00"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Space Grotesk"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .map-mesh {
+            background-image: radial-gradient(circle at 2px 2px, rgba(0,0,0,0.05) 1px, transparent 0);
+            background-size: 32px 32px;
+        }
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body overflow-hidden">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white flex justify-between items-center px-6 py-4 max-w-full border-b border-zinc-100 shadow-[0_2px_15px_rgba(0,0,0,0.05)]">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-emerald-600" data-icon="security">security</span>
+<h1 class="text-lg font-bold tracking-[0.05em] uppercase text-emerald-600 font-['Inter']">Neuralis Sentinel</h1>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<span class="text-zinc-600 font-label text-xs tracking-widest cursor-pointer hover:text-emerald-600 transition-colors duration-300">Home</span>
+<span class="text-emerald-600 font-bold font-label text-xs tracking-widest cursor-pointer active:scale-95">Map</span>
+<span class="text-zinc-600 font-label text-xs tracking-widest cursor-pointer hover:text-emerald-600 transition-colors duration-300">Profile</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2 px-3 py-1.5 rounded-full border border-zinc-200 bg-zinc-50">
+<div class="w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.4)]"></div>
+<span class="text-[10px] font-label font-bold text-emerald-700 tracking-wider uppercase">Authority Mode: ON</span>
+</div>
+<button class="text-emerald-700 font-bold text-xs tracking-widest uppercase cursor-pointer active:scale-95 hover:text-emerald-600">ADMIN</button>
+</div>
+</header>
+<!-- Main Canvas: Map Interface -->
+<main class="relative w-full h-screen pt-16 pb-20 overflow-hidden">
+<!-- Background Map Layer -->
+<div class="absolute inset-0 z-0 bg-white overflow-hidden">
+<img alt="Pune Map" class="w-full h-full object-cover opacity-60 mix-blend-multiply grayscale-[0.3]" data-alt="High-resolution light-themed topographical map of Pune city with clean vector lines and muted gray and white tones" data-location="Pune, India" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAX9Ar7ioDJzIU3r62TNjJ7FmyDGwORLY5-MGHiLC3wScxkhzf8b0CwDIf7y3xG6QtBuUfON0FrClJLST4VlD-xO-AkbG0md1Aw4crm4eJWfADCp4jL6O2eKs114aaQdOxPfUOABzuxVyMrcMyJVyOmjVDFVAwl6LebbOblroT2llsVm7HxmgL5RRThdEw5Snp8acIHyLqT9nDjDfY2nAaThM1FW0kQP71V3B6nkFNeIej_1tN8wcZEP4Pxy8MTfWSwJNTUjUEHzliT"/>
+<!-- Heatmap Overlays -->
+<div class="absolute inset-0 bg-transparent pointer-events-none">
+<!-- Cluster 1: Koregaon Park Area -->
+<div class="absolute top-[35%] left-[55%] w-64 h-64 rounded-full bg-emerald-200/30 blur-[60px]"></div>
+<div class="absolute top-[38%] left-[58%] w-32 h-32 rounded-full bg-emerald-400/20 blur-[40px]"></div>
+<!-- Cluster 2: Hinjawadi Area -->
+<div class="absolute top-[25%] left-[20%] w-80 h-80 rounded-full bg-amber-200/20 blur-[80px]"></div>
+<div class="absolute top-[30%] left-[25%] w-40 h-40 rounded-full bg-amber-400/10 blur-[50px]"></div>
+</div>
+<!-- UI Map Pins -->
+<div class="absolute top-[40%] left-[58%] -translate-x-1/2 -translate-y-1/2 group">
+<div class="relative flex items-center justify-center">
+<div class="absolute w-8 h-8 bg-emerald-400/40 rounded-full animate-ping"></div>
+<div class="relative w-4 h-4 bg-emerald-500 rounded-full border-2 border-white shadow-lg"></div>
+<!-- Tooltip -->
+<div class="absolute bottom-full mb-3 hidden group-hover:block w-48 p-3 bg-white/95 backdrop-blur-md rounded-xl shadow-xl border border-zinc-100">
+<p class="text-[10px] font-label text-zinc-500 uppercase tracking-widest mb-1">Sector 09 • Koregaon</p>
+<p class="text-sm font-bold text-emerald-700">High Anomaly Density</p>
+<p class="text-[10px] text-zinc-400 mt-1">Surveillance Accuracy: 98.4%</p>
+</div>
+</div>
+</div>
+<div class="absolute top-[32%] left-[28%] -translate-x-1/2 -translate-y-1/2">
+<div class="relative flex items-center justify-center">
+<div class="w-3 h-3 bg-amber-500 rounded-full border-2 border-white shadow-lg"></div>
+</div>
+</div>
+</div>
+<!-- Floating UI Overlays -->
+<div class="absolute left-6 top-24 z-10 flex flex-col gap-4 w-72">
+<div class="bg-white/90 backdrop-blur-xl p-5 rounded-3xl border border-zinc-100 shadow-xl">
+<header class="flex justify-between items-center mb-4">
+<h2 class="text-xs font-label uppercase tracking-[0.1em] text-zinc-500">Region Metrics</h2>
+<span class="material-symbols-outlined text-xs text-zinc-400" data-icon="more_vert">more_vert</span>
+</header>
+<div class="space-y-4">
+<div>
+<div class="flex justify-between text-[10px] font-label text-zinc-400 uppercase mb-1">
+<span>Reporting Volume</span>
+<span class="text-emerald-600 font-bold">Elevated</span>
+</div>
+<div class="h-1 w-full bg-zinc-100 rounded-full overflow-hidden">
+<div class="h-full bg-emerald-500 w-[72%]"></div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<div class="p-3 bg-zinc-50 rounded-xl">
+<p class="text-[10px] font-label text-zinc-400 uppercase mb-1">Active</p>
+<p class="text-xl font-headline font-bold text-zinc-800">1,204</p>
+</div>
+<div class="p-3 bg-zinc-50 rounded-xl">
+<p class="text-[10px] font-label text-zinc-400 uppercase mb-1">Clusters</p>
+<p class="text-xl font-headline font-bold text-zinc-800">08</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Map Legend -->
+<div class="bg-white/90 backdrop-blur-xl p-5 rounded-3xl border border-zinc-100 shadow-xl">
+<h3 class="text-xs font-label uppercase tracking-[0.1em] text-zinc-500 mb-4">Cluster Intensity</h3>
+<div class="space-y-3">
+<div class="flex items-center gap-3">
+<div class="w-3 h-3 rounded-full bg-rose-500 shadow-[0_0_8px_rgba(244,63,94,0.3)]"></div>
+<span class="text-[11px] font-label text-zinc-600 uppercase tracking-wider">Critical Outbreak</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-3 h-3 rounded-full bg-amber-500 shadow-[0_0_8px_rgba(245,158,11,0.3)]"></div>
+<span class="text-[11px] font-label text-zinc-600 uppercase tracking-wider">Heightened Drift</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-3 h-3 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.3)]"></div>
+<span class="text-[11px] font-label text-zinc-600 uppercase tracking-wider">Baseline Stability</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Side: Interaction Toggles -->
+<div class="absolute right-6 top-24 z-10 flex flex-col gap-2">
+<button class="w-12 h-12 bg-white/90 backdrop-blur-xl rounded-xl flex items-center justify-center border border-zinc-100 text-zinc-500 hover:text-emerald-600 shadow-md transition-all active:scale-95">
+<span class="material-symbols-outlined" data-icon="layers">layers</span>
+</button>
+<button class="w-12 h-12 bg-white/90 backdrop-blur-xl rounded-xl flex items-center justify-center border border-zinc-100 text-zinc-500 hover:text-emerald-600 shadow-md transition-all active:scale-95">
+<span class="material-symbols-outlined" data-icon="my_location">my_location</span>
+</button>
+<div class="h-[2px] w-8 bg-zinc-100 mx-auto my-1"></div>
+<button class="w-12 h-12 bg-white/90 backdrop-blur-xl rounded-xl flex items-center justify-center border border-zinc-100 text-zinc-500 hover:text-emerald-600 shadow-md transition-all active:scale-95">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+</button>
+<button class="w-12 h-12 bg-white/90 backdrop-blur-xl rounded-xl flex items-center justify-center border border-zinc-100 text-zinc-500 hover:text-emerald-600 shadow-md transition-all active:scale-95">
+<span class="material-symbols-outlined" data-icon="remove">remove</span>
+</button>
+</div>
+<!-- Bottom Status Bar (Floating) -->
+<div class="absolute bottom-28 left-1/2 -translate-x-1/2 z-10">
+<div class="bg-white/90 backdrop-blur-2xl px-6 py-3 rounded-full border border-zinc-100 shadow-lg flex items-center gap-8">
+<div class="flex items-center gap-2">
+<span class="text-[10px] font-label text-zinc-400 uppercase tracking-tighter">Lat:</span>
+<span class="text-xs font-headline text-zinc-800">18.5204° N</span>
+</div>
+<div class="w-px h-4 bg-zinc-200"></div>
+<div class="flex items-center gap-2">
+<span class="text-[10px] font-label text-zinc-400 uppercase tracking-tighter">Long:</span>
+<span class="text-xs font-headline text-zinc-800">73.8567° E</span>
+</div>
+<div class="w-px h-4 bg-zinc-200"></div>
+<div class="flex items-center gap-2">
+<span class="text-[10px] font-label text-zinc-400 uppercase tracking-tighter">Last Sync:</span>
+<span class="text-xs font-headline text-emerald-600 font-bold">Live</span>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 bg-white/95 backdrop-blur-xl flex justify-around items-center h-20 pb-safe w-full border-t border-zinc-100 shadow-[0_-2px_15px_rgba(0,0,0,0.05)] rounded-t-2xl">
+<a class="flex flex-col items-center justify-center text-zinc-500 px-6 py-2 hover:text-emerald-600 transition-all" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="home">home</span>
+<span class="font-['Space_Grotesk'] text-[10px] uppercase tracking-widest">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-emerald-600 rounded-xl px-6 py-2" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="explore">explore</span>
+<span class="font-['Space_Grotesk'] text-[10px] uppercase tracking-widest font-bold">Map</span>
+</a>
+<a class="flex flex-col items-center justify-center text-zinc-500 px-6 py-2 hover:text-emerald-600 transition-all" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="account_circle">account_circle</span>
+<span class="font-['Space_Grotesk'] text-[10px] uppercase tracking-widest">Profile</span>
+</a>
+</nav>
+</body></html>

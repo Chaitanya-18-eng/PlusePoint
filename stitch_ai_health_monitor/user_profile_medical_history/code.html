@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-primary": "#006d36",
+                        "surface-container-highest": "#353436",
+                        "surface-container-low": "#F4F4F5",
+                        "on-primary-fixed": "#00210c",
+                        "surface": "#FFFFFF",
+                        "primary-container": "#4ade80",
+                        "on-secondary": "#402d00",
+                        "on-tertiary-fixed": "#410006",
+                        "surface-container-high": "#E5E7EB",
+                        "tertiary-fixed": "#ffdad8",
+                        "error-container": "#93000a",
+                        "secondary-fixed": "#ffdf9f",
+                        "inverse-on-surface": "#313031",
+                        "outline": "#869486",
+                        "on-tertiary": "#670211",
+                        "on-surface": "#131314",
+                        "on-primary-container": "#005e2d",
+                        "surface-container": "#FAFAFA",
+                        "on-error-container": "#ffdad6",
+                        "surface-dim": "#F4F4F5",
+                        "surface-bright": "#FFFFFF",
+                        "secondary-fixed-dim": "#f9bd22",
+                        "on-tertiary-container": "#96282d",
+                        "on-primary-fixed-variant": "#005227",
+                        "on-secondary-fixed-variant": "#5c4300",
+                        "on-primary": "#003919",
+                        "surface-tint": "#4de082",
+                        "tertiary-container": "#ffb0ad",
+                        "secondary-container": "#e3aa00",
+                        "background": "#FFFFFF",
+                        "primary-fixed": "#6dfe9c",
+                        "on-secondary-container": "#5a4100",
+                        "outline-variant": "#3d4a3e",
+                        "surface-variant": "#F4F4F5",
+                        "secondary": "#ffc640",
+                        "on-background": "#131314",
+                        "tertiary": "#ffd7d5",
+                        "on-tertiary-fixed-variant": "#881d24",
+                        "primary-fixed-dim": "#4de082",
+                        "surface-container-lowest": "#FFFFFF",
+                        "inverse-surface": "#e5e2e3",
+                        "error": "#ffb4ab",
+                        "on-surface-variant": "#3d4a3e",
+                        "tertiary-fixed-dim": "#ffb3b0",
+                        "primary": "#4ADE80",
+                        "on-error": "#690005",
+                        "on-secondary-fixed": "#261a00"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Space Grotesk"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { background-color: #FFFFFF; color: #131314; font-family: 'Inter', sans-serif; }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-white text-on-surface">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white text-emerald-600 font-['Inter'] tracking-tight border-b border-zinc-100 shadow-[0_4px_20px_rgba(0,0,0,0.04)] flex justify-between items-center px-6 py-4 max-w-full">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#4ADE80]" data-icon="security">security</span>
+<div class="flex flex-col">
+<span class="text-lg font-bold tracking-[0.05em] uppercase text-zinc-900">Neuralis Sentinel</span>
+<span class="font-label text-[10px] tracking-widest text-zinc-500 uppercase">CENTRAL_DISTRICT_V01</span>
+</div>
+</div>
+<div class="cursor-pointer active:scale-95 bg-emerald-50 text-[10px] font-bold tracking-widest text-[#4ADE80] px-3 py-1 rounded border border-emerald-100">USER</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-2xl mx-auto space-y-8">
+<!-- User Identity Header -->
+<section class="flex items-center gap-6 p-6 rounded-xl bg-surface-container-low border border-outline-variant/10">
+<div class="w-20 h-20 rounded-full bg-[#4ADE80] flex items-center justify-center text-on-primary text-2xl font-bold tracking-tighter shadow-lg shadow-emerald-200/50">
+            JD
+        </div>
+<div class="space-y-1">
+<h1 class="text-2xl font-extrabold tracking-tight text-on-surface">Jane Doe</h1>
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm opacity-60" data-icon="clinical_notes">clinical_notes</span>
+<span class="font-label text-xs uppercase tracking-wider text-on-surface-variant">Age Bracket: 20-30</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm opacity-60" data-icon="location_on">location_on</span>
+<span class="font-label text-xs uppercase tracking-wider text-on-surface-variant">Primary Region: Pune-Kothrud</span>
+</div>
+</div>
+</div>
+</section>
+<!-- System Theme Toggle -->
+<section class="bg-surface-container p-6 rounded-2xl border border-outline-variant/5 shadow-sm">
+<div class="flex justify-between items-center">
+<div class="space-y-1">
+<h3 class="text-sm font-bold uppercase tracking-widest font-label">Interface Mode</h3>
+<p class="text-xs text-on-surface-variant">System-wide display optimization</p>
+</div>
+<div class="relative w-40 h-11 bg-zinc-100 rounded-full p-1.5 flex items-center cursor-pointer shadow-inner">
+<!-- Toggle Slider -->
+<div class="absolute left-1.5 w-[calc(50%-4px)] h-8 bg-white shadow-md rounded-full flex items-center justify-center gap-2 z-10 border border-zinc-100 transition-all duration-300">
+<span class="material-symbols-outlined text-sm text-amber-500" data-icon="light_mode">light_mode</span>
+<span class="font-label text-[10px] font-bold tracking-widest">LIGHT</span>
+</div>
+<div class="w-full flex justify-between px-3 text-on-surface-variant/40">
+<span class="text-[9px] font-bold invisible">LIGHT</span>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="dark_mode">dark_mode</span>
+<span class="font-label text-[10px] font-bold tracking-widest">DARK</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Alert History / Medical History Timeline -->
+<section class="space-y-6">
+<div class="flex items-center justify-between">
+<h2 class="text-lg font-bold tracking-tight">Medical History &amp; Visits</h2>
+<span class="font-label text-[10px] uppercase tracking-widest px-2 py-1 bg-surface-container-high rounded text-on-surface-variant">Clinical Log</span>
+</div>
+<div class="space-y-4 relative before:absolute before:left-4 before:top-2 before:bottom-2 before:w-[1px] before:bg-outline-variant/20">
+<!-- Clinical Consultation -->
+<div class="relative pl-10">
+<div class="absolute left-2.5 top-3 w-3 h-3 rounded-full bg-[#4ADE80] ring-4 ring-white"></div>
+<div class="bg-white p-5 rounded-xl border border-zinc-100 shadow-sm">
+<div class="flex justify-between items-start mb-2">
+<div class="space-y-0.5">
+<h4 class="font-bold text-on-surface">Annual Health Screening</h4>
+<p class="text-[10px] font-label uppercase tracking-wider text-emerald-600">Jan 12, 2025 • Apollo Speciality</p>
+</div>
+<span class="font-label text-[9px] text-emerald-700 font-bold px-2 py-0.5 bg-emerald-50 border border-emerald-100 rounded">COMPLETED</span>
+</div>
+<div class="mt-3 p-3 bg-zinc-50 rounded-lg space-y-2">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[14px] text-zinc-400 mt-0.5" data-icon="description">description</span>
+<p class="text-xs text-on-surface-variant">General physical exam, Vit-D profile, and metabolic panel sync.</p>
+</div>
+<div class="flex items-center gap-2 text-[#4ADE80] text-xs font-semibold cursor-pointer">
+<span class="material-symbols-outlined text-sm" data-icon="download">download</span>
+<span>Download Full Report</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Diagnostic Result -->
+<div class="relative pl-10">
+<div class="absolute left-2.5 top-3 w-3 h-3 rounded-full bg-secondary-container ring-4 ring-white"></div>
+<div class="bg-white p-5 rounded-xl border border-zinc-100 shadow-sm">
+<div class="flex justify-between items-start mb-2">
+<div class="space-y-0.5">
+<h4 class="font-bold text-on-surface">CBC &amp; Metabolic Panel</h4>
+<p class="text-[10px] font-label uppercase tracking-wider text-on-surface-variant">Nov 22, 2024 • Regional Bio-Lab</p>
+</div>
+<span class="font-label text-[9px] text-amber-700 font-bold px-2 py-0.5 bg-amber-50 border border-amber-100 rounded">REVIEWED</span>
+</div>
+<p class="text-xs text-on-surface-variant leading-relaxed">HbA1c: 5.4% (Normal). Serum Iron levels trending lower than baseline. Nutritional adjustment recommended.</p>
+</div>
+</div>
+<!-- Past Advisory -->
+<div class="relative pl-10">
+<div class="absolute left-2.5 top-3 w-3 h-3 rounded-full bg-on-tertiary-container ring-4 ring-white"></div>
+<div class="bg-white p-5 rounded-xl border border-zinc-100 shadow-sm">
+<div class="flex justify-between items-start mb-2">
+<div class="space-y-0.5">
+<h4 class="font-bold text-on-surface">Dengue Recovery Sync</h4>
+<p class="text-[10px] font-label uppercase tracking-wider text-on-surface-variant">Oct 15, 2024 • Home Monitoring</p>
+</div>
+<span class="font-label text-[9px] text-rose-700 font-bold px-2 py-0.5 bg-rose-50 border border-rose-100 rounded">CRITICAL</span>
+</div>
+<p class="text-xs text-on-surface-variant leading-relaxed">Platelet count stabilized at 195k. Post-recovery biometric baseline reset confirmed by system intercept.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Security Section -->
+<section class="p-6 rounded-xl border flex gap-4 items-start shadow-sm bg-zinc-50/50 border-outline-variant/10">
+<span class="material-symbols-outlined mt-1 text-[#4ADE80]" data-icon="verified_user">verified_user</span>
+<div class="space-y-1">
+<h3 class="text-xs font-bold uppercase tracking-widest font-label text-[#4ADE80]">Security Protocol Alpha</h3>
+<p class="text-[11px] leading-relaxed font-body text-on-surface-variant">
+                DPDP Act COMPLIANT: Your data is anonymized and stored locally. Neuralis encryption ensures zero-knowledge processing of biometric identifiers.
+            </p>
+</div>
+</section>
+</main>
+<!-- BottomNavBar using {{DATA:COMPONENTS:COMPONENTS_35}} specifications -->
+<nav class="fixed bottom-0 left-0 w-full bg-white/90 backdrop-blur-2xl border-t border-zinc-100 shadow-[0_-4px_40px_rgba(0,0,0,0.04)] flex justify-around items-center px-4 py-3 pb-safe z-50 rounded-t-[0.75rem]">
+<button class="flex flex-col items-center justify-center text-gray-400 hover:text-[#4ADE80] transition-colors w-12 h-12">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-['Space_Grotesk'] text-[8px] uppercase tracking-widest mt-1">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center text-gray-400 hover:text-[#4ADE80] transition-colors w-12 h-12">
+<span class="material-symbols-outlined" data-icon="distance">distance</span>
+<span class="font-['Space_Grotesk'] text-[8px] uppercase tracking-widest mt-1">Map</span>
+</button>
+<button class="flex flex-col items-center justify-center text-gray-400 hover:text-[#4ADE80] transition-colors w-12 h-12">
+<span class="material-symbols-outlined" data-icon="notifications_active">notifications_active</span>
+<span class="font-['Space_Grotesk'] text-[8px] uppercase tracking-widest mt-1">Alerts</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#4ADE80] bg-[#4ADE80]/10 rounded-full w-12 h-12 scale-95 transition-all">
+<span class="material-symbols-outlined" data-icon="person" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="font-['Space_Grotesk'] text-[8px] uppercase tracking-widest mt-0.5 font-bold">Profile</span>
+</button>
+</nav>
+</body></html>

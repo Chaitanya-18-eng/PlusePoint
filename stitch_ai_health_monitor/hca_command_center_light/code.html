@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Neuralis Sentinel - Admin Command Center</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Space_Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-primary": "#006d36",
+                    "surface-container-highest": "#f4f4f5",
+                    "surface-container-low": "#ffffff",
+                    "on-primary-fixed": "#00210c",
+                    "surface": "#ffffff",
+                    "primary-container": "#4ade80",
+                    "on-secondary": "#402d00",
+                    "on-tertiary-fixed": "#410006",
+                    "surface-container-high": "#f1f1f2",
+                    "tertiary-fixed": "#ffdad8",
+                    "error-container": "#93000a",
+                    "secondary-fixed": "#ffdf9f",
+                    "inverse-on-surface": "#ffffff",
+                    "outline": "#71717a",
+                    "on-tertiary": "#670211",
+                    "on-tertiary-container": "#96282d",
+                    "surface-container": "#fafafa",
+                    "on-error-container": "#ffdad6",
+                    "surface-dim": "#f4f4f5",
+                    "surface-bright": "#ffffff",
+                    "secondary-fixed-dim": "#f9bd22",
+                    "on-primary-fixed-variant": "#005227",
+                    "on-secondary-fixed-variant": "#5c4300",
+                    "on-primary": "#003919",
+                    "surface-tint": "#4de082",
+                    "tertiary-container": "#ffb0ad",
+                    "secondary-container": "#e3aa00",
+                    "background": "#ffffff",
+                    "primary-fixed": "#6dfe9c",
+                    "on-secondary-container": "#5a4100",
+                    "outline-variant": "#e4e4e7",
+                    "surface-variant": "#f4f4f5",
+                    "secondary": "#f59e0b",
+                    "on-background": "#18181b",
+                    "tertiary": "#ffd7d5",
+                    "on-tertiary-fixed-variant": "#881d24",
+                    "primary-fixed-dim": "#4de082",
+                    "surface-container-lowest": "#ffffff",
+                    "inverse-surface": "#18181b",
+                    "error": "#ef4444",
+                    "on-surface-variant": "#52525b",
+                    "tertiary-fixed-dim": "#ffb3b0",
+                    "primary": "#10b981",
+                    "on-error": "#ffffff",
+                    "on-secondary-fixed": "#261a00"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "body": ["Inter"],
+                    "label": ["Space Grotesk"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(20px);
+      }
+      .neural-grid {
+        background-image: radial-gradient(rgba(16, 185, 129, 0.05) 1px, transparent 1px);
+        background-size: 32px 32px;
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-background font-body selection:bg-primary-container selection:text-on-primary-container neural-grid min-h-screen pb-24">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white border-b border-zinc-100 shadow-[0_4px_20px_rgba(0,0,0,0.03)] flex justify-between items-center px-6 py-4 max-w-full">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-emerald-600" data-icon="security">security</span>
+<div class="flex flex-col">
+<h1 class="text-lg font-bold tracking-[0.05em] uppercase text-emerald-600 font-['Inter']">Neuralis Sentinel</h1>
+<span class="font-label text-[10px] tracking-widest text-zinc-400 uppercase">ADMIN_ACCESS_GRANTED</span>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<nav class="hidden md:flex gap-8">
+<a class="text-emerald-600 font-bold hover:text-emerald-500 transition-colors duration-300 font-label text-xs tracking-widest" href="#">COMMAND CENTER</a>
+<a class="text-zinc-500 hover:text-emerald-500 transition-colors duration-300 font-label text-xs tracking-widest" href="#">DIAGNOSTICS</a>
+<a class="text-zinc-500 hover:text-emerald-500 transition-colors duration-300 font-label text-xs tracking-widest" href="#">ARCHIVE</a>
+</nav>
+<button class="cursor-pointer active:scale-95 bg-emerald-50 text-emerald-600 px-4 py-1.5 rounded-lg border border-emerald-100 font-label text-[10px] font-bold tracking-widest">ADMIN</button>
+</div>
+</header>
+<main class="pt-24 px-6 max-w-7xl mx-auto space-y-6">
+<!-- Compliance Header -->
+<section class="w-full bg-white border border-zinc-200/60 rounded-xl p-4 flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-4">
+<div class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></div>
+<p class="font-label text-xs tracking-[0.1em] text-zinc-600">DPDP Act COMPLIANT: VIEWING AGGREGATED REGIONAL DATA ONLY</p>
+</div>
+<div class="flex items-center gap-2 text-[10px] font-label text-zinc-400 uppercase tracking-tighter">
+<span>Last Scanned: 0.04ms ago</span>
+<span class="material-symbols-outlined text-xs" data-icon="sync">sync</span>
+</div>
+</section>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- HCA High-Density Monitor -->
+<aside class="md:col-span-4 space-y-4">
+<div class="flex items-center justify-between px-2">
+<h3 class="font-label text-xs font-bold tracking-widest text-zinc-800 uppercase">Pending AI Signals</h3>
+<span class="text-[10px] font-label text-emerald-600 px-2 py-0.5 rounded-full bg-emerald-50 border border-emerald-100">LIVE</span>
+</div>
+<div class="space-y-2">
+<!-- Signal Item -->
+<div class="bg-white p-4 rounded-xl border border-zinc-200 border-l-4 border-l-secondary-container flex justify-between items-start shadow-sm">
+<div>
+<p class="text-sm font-semibold text-zinc-800">Kothrud: 40% Fever Spike</p>
+<p class="text-[10px] font-label text-zinc-500 mt-1 uppercase">Confidence Score: 0.92</p>
+</div>
+<span class="material-symbols-outlined text-amber-500" data-icon="warning" style="font-variation-settings: 'FILL' 1;">warning</span>
+</div>
+<div class="bg-white p-4 rounded-xl border border-zinc-200 border-l-4 border-l-primary-container flex justify-between items-start shadow-sm">
+<div>
+<p class="text-sm font-semibold text-zinc-800">Baner: Inventory Replenished</p>
+<p class="text-[10px] font-label text-zinc-500 mt-1 uppercase">Status: Green Zone</p>
+</div>
+<span class="material-symbols-outlined text-emerald-500" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div class="bg-white p-4 rounded-xl border border-zinc-200 border-l-4 border-l-on-tertiary-container flex justify-between items-start shadow-sm">
+<div>
+<p class="text-sm font-semibold text-zinc-800">Hadapsar: Cluster Detected</p>
+<p class="text-[10px] font-label text-zinc-500 mt-1 uppercase">Action Required: Immediate</p>
+</div>
+<span class="material-symbols-outlined text-red-500" data-icon="emergency" style="font-variation-settings: 'FILL' 1;">emergency</span>
+</div>
+<div class="bg-white p-4 rounded-xl border border-zinc-200 border-l-4 border-l-zinc-300 flex justify-between items-start opacity-70 shadow-sm">
+<div>
+<p class="text-sm font-semibold text-zinc-800">Viman Nagar: System Calibrating</p>
+<p class="text-[10px] font-label text-zinc-500 mt-1 uppercase">Diagnostic Cycle: 4/5</p>
+</div>
+<span class="material-symbols-outlined text-zinc-400" data-icon="hourglass_empty">hourglass_empty</span>
+</div>
+</div>
+</aside>
+<!-- Main Dashboard Bento Grid -->
+<div class="md:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Inventory Insight -->
+<div class="bg-white rounded-xl overflow-hidden flex flex-col border border-zinc-200 shadow-sm">
+<div class="p-4 border-b border-zinc-100 flex justify-between items-center">
+<h3 class="font-label text-xs font-bold tracking-widest uppercase text-zinc-800">Inventory Insight</h3>
+<span class="text-[10px] font-label text-red-600 font-bold">STOCK STATUS: CRITICAL</span>
+</div>
+<div class="h-48 w-full bg-zinc-50 relative group overflow-hidden">
+<img class="w-full h-full object-cover grayscale opacity-60 group-hover:scale-110 transition-transform duration-700" data-alt="top-down digital schematic map of an urban area with red and green glowing circular data points indicating inventory status" data-location="Pune" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSniAAiNy4To4MnsoapW7wG8s_HmH2JCrcdwRYNG-3--dUKj9GcdplMpwPXjtgM61ifib3jK8YlcSjpS2y14FUm86xHIg2mP2KIqNa-oAXHBP0iKeNKRb6ii2aaudL7bzUSkrX_Xrq17xXbJWBBGPfOJx2k53dg72w_l03iGQkierjcCMyPv3_WnPDaWPxF9kTmochwFs3sfOtYa7lpIgRyQ4yiZBogcDpj5DdxqrYAQxTQr2EclLg-wFgWG7e61pY_vJm5xPlfWcE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-white/90 to-transparent"></div>
+<div class="absolute bottom-4 left-4 right-4 flex justify-between items-end">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-amber-500"></span>
+<span class="text-[10px] font-label text-zinc-700 font-medium">Paracetamol: 22%</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+<span class="text-[10px] font-label text-zinc-700 font-medium">ORS: 84%</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-zinc-400" data-icon="map">map</span>
+</div>
+</div>
+<div class="p-4 flex gap-4 overflow-x-auto">
+<div class="bg-zinc-50 px-3 py-2 rounded-lg flex flex-col gap-1 min-w-[100px] border border-zinc-100">
+<span class="text-[10px] font-label text-zinc-500 uppercase tracking-wider">Aundh</span>
+<span class="text-xs font-bold text-amber-600">LOW</span>
+</div>
+<div class="bg-zinc-50 px-3 py-2 rounded-lg flex flex-col gap-1 min-w-[100px] border border-zinc-100">
+<span class="text-[10px] font-label text-zinc-500 uppercase tracking-wider">Kothrud</span>
+<span class="text-xs font-bold text-red-600">CRITICAL</span>
+</div>
+<div class="bg-zinc-50 px-3 py-2 rounded-lg flex flex-col gap-1 min-w-[100px] border border-zinc-100">
+<span class="text-[10px] font-label text-zinc-500 uppercase tracking-wider">Wakad</span>
+<span class="text-xs font-bold text-emerald-600">STABLE</span>
+</div>
+</div>
+</div>
+<!-- Predictive Triage -->
+<div class="bg-white rounded-xl border border-zinc-200 shadow-sm flex flex-col">
+<div class="p-4 border-b border-zinc-100 flex justify-between items-center">
+<h3 class="font-label text-xs font-bold tracking-widest uppercase text-zinc-800">Predictive Triage</h3>
+<span class="material-symbols-outlined text-xs text-zinc-400" data-icon="trending_up">trending_up</span>
+</div>
+<div class="flex-1 p-6 flex flex-col justify-between">
+<div class="space-y-1">
+<p class="text-2xl font-bold tracking-tight text-emerald-600">+14% <span class="text-xs font-normal text-zinc-400">expected influx</span></p>
+<p class="font-label text-[10px] text-zinc-500 uppercase tracking-widest">Next 7 Days Admission Forecast</p>
+</div>
+<div class="flex items-end justify-between h-24 gap-1">
+<div class="w-full bg-zinc-100 rounded-t-sm h-[40%]"></div>
+<div class="w-full bg-zinc-100 rounded-t-sm h-[35%]"></div>
+<div class="w-full bg-zinc-100 rounded-t-sm h-[50%]"></div>
+<div class="w-full bg-emerald-100 border-t border-emerald-300 rounded-t-sm h-[70%]"></div>
+<div class="w-full bg-emerald-200 border-t border-emerald-400 rounded-t-sm h-[85%]"></div>
+<div class="w-full bg-emerald-300 border-t border-emerald-500 rounded-t-sm h-[95%]"></div>
+<div class="w-full bg-amber-100 border-t border-amber-300 rounded-t-sm h-[80%]"></div>
+</div>
+<div class="flex justify-between font-label text-[8px] text-zinc-400 uppercase px-1">
+<span>MON</span><span>TUE</span><span>WED</span><span>THU</span><span>FRI</span><span>SAT</span><span>SUN</span>
+</div>
+</div>
+</div>
+<!-- Broadcast Center Tool -->
+<div class="md:col-span-2 bg-white rounded-xl border border-zinc-200 shadow-sm p-6 space-y-6">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-emerald-50 flex items-center justify-center">
+<span class="material-symbols-outlined text-emerald-600" data-icon="broadcast_on_home">broadcast_on_home</span>
+</div>
+<div>
+<h3 class="font-label text-sm font-bold tracking-widest uppercase text-zinc-800">Broadcast Center</h3>
+<p class="text-[10px] text-zinc-500">GENERATE PREVENTATIVE ADVICE FOR REGIONAL CHANNELS</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="md:col-span-2 space-y-4">
+<div class="space-y-1.5">
+<label class="font-label text-[10px] text-zinc-400 uppercase tracking-wider ml-1">Official Alert Message</label>
+<textarea class="w-full bg-zinc-50 border border-zinc-200 rounded-xl text-sm focus:ring-1 focus:ring-emerald-500 placeholder:text-zinc-400 p-3" placeholder="Type preventative advice here..." rows="3">Fumigation starting in Kothrud today. Residents are advised to keep windows closed between 17:00 and 19:00 IST.</textarea>
+</div>
+<div class="flex gap-3">
+<div class="flex-1 space-y-1.5">
+<label class="font-label text-[10px] text-zinc-400 uppercase tracking-wider ml-1">Target Region</label>
+<div class="bg-zinc-50 border border-zinc-200 rounded-xl px-4 py-2.5 text-xs text-zinc-700 flex justify-between items-center cursor-pointer">
+<span>Kothrud Regional Cluster</span>
+<span class="material-symbols-outlined text-xs" data-icon="expand_more">expand_more</span>
+</div>
+</div>
+<div class="flex-1 space-y-1.5">
+<label class="font-label text-[10px] text-zinc-400 uppercase tracking-wider ml-1">Priority Level</label>
+<div class="bg-zinc-50 border border-zinc-200 rounded-xl px-4 py-2.5 text-xs text-amber-600 font-medium flex justify-between items-center cursor-pointer">
+<span>Elevated (Amber)</span>
+<span class="material-symbols-outlined text-xs" data-icon="expand_more">expand_more</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Center -->
+<div class="bg-zinc-50 rounded-xl p-4 flex flex-col justify-between border border-zinc-200/60">
+<div class="space-y-3">
+<p class="font-label text-[10px] text-zinc-500 uppercase tracking-widest">Verification Logic</p>
+<div class="flex items-center gap-2 text-[10px] text-emerald-600 font-medium">
+<span class="material-symbols-outlined text-xs" data-icon="verified_user">verified_user</span>
+<span>AI Signal Verified</span>
+</div>
+<div class="flex items-center gap-2 text-[10px] text-emerald-600 font-medium">
+<span class="material-symbols-outlined text-xs" data-icon="verified_user">verified_user</span>
+<span>Inventory Aligned</span>
+</div>
+<div class="flex items-center gap-2 text-[10px] text-zinc-400">
+<span class="material-symbols-outlined text-xs" data-icon="circle">circle</span>
+<span>Manual HCA Oversight</span>
+</div>
+</div>
+<button class="w-full bg-emerald-500 text-white py-3 rounded-xl font-bold text-xs uppercase tracking-[0.15em] transition-all hover:bg-emerald-600 hover:shadow-lg active:scale-95 shadow-emerald-200 mt-4">
+                                Verify &amp; Broadcast Official Alert
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Mobile only fallback) -->
+<nav class="md:hidden fixed bottom-0 w-full z-50 rounded-t-xl bg-white border-t border-zinc-100 shadow-[0_-4px_20px_rgba(0,0,0,0.05)] flex justify-around items-center h-20 pb-safe">
+<div class="flex flex-col items-center justify-center bg-emerald-50 text-emerald-600 rounded-xl px-6 py-2">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-['Space_Grotesk'] text-[10px] uppercase tracking-widest mt-1">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center text-zinc-400 px-6 py-2 hover:bg-zinc-50 transition-all">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span class="font-['Space_Grotesk'] text-[10px] uppercase tracking-widest mt-1">Map</span>
+</div>
+<div class="flex flex-col items-center justify-center text-zinc-400 px-6 py-2 hover:bg-zinc-50 transition-all">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+<span class="font-['Space_Grotesk'] text-[10px] uppercase tracking-widest mt-1">Profile</span>
+</div>
+</nav>
+</body></html>

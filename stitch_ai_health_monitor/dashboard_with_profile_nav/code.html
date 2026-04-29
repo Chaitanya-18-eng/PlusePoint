@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Space+Grotesk:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface": "#FFFFFF",
+                        "tertiary-container": "#ffb0ad",
+                        "on-surface": "#1a1a1a",
+                        "surface-dim": "#f8f9fa",
+                        "on-secondary-container": "#5a4100",
+                        "tertiary-fixed-dim": "#ffb3b0",
+                        "surface-container-lowest": "#FFFFFF",
+                        "on-primary-fixed": "#00210c",
+                        "surface-variant": "#f1f3f1",
+                        "surface-tint": "#059669",
+                        "outline-variant": "#e2e8f0",
+                        "background": "#FFFFFF",
+                        "on-secondary-fixed-variant": "#5c4300",
+                        "surface-container": "#f8fafc",
+                        "on-secondary": "#402d00",
+                        "secondary-fixed": "#ffdf9f",
+                        "on-background": "#1a1a1a",
+                        "on-surface-variant": "#64748b",
+                        "on-primary-container": "#065f46",
+                        "on-secondary-fixed": "#261a00",
+                        "surface-bright": "#ffffff",
+                        "on-primary-fixed-variant": "#065f46",
+                        "surface-container-high": "#f1f5f9",
+                        "error-container": "#fee2e2",
+                        "on-tertiary-container": "#96282d",
+                        "on-error-container": "#991b1b",
+                        "secondary": "#d97706",
+                        "inverse-primary": "#059669",
+                        "error": "#dc2626",
+                        "inverse-on-surface": "#f8f9fa",
+                        "secondary-container": "#fef3c7",
+                        "primary-fixed": "#6dfe9c",
+                        "surface-container-low": "#ffffff",
+                        "on-error": "#ffffff",
+                        "secondary-fixed-dim": "#f9bd22",
+                        "primary-container": "#ecfdf5",
+                        "outline": "#cbd5e1",
+                        "on-tertiary-fixed-variant": "#881d24",
+                        "primary": "#059669",
+                        "tertiary-fixed": "#ffdad8",
+                        "surface-container-highest": "#f1f5f9",
+                        "on-primary": "#ffffff",
+                        "inverse-surface": "#1a1a1a",
+                        "primary-fixed-dim": "#4de082",
+                        "tertiary": "#ffd7d5",
+                        "on-tertiary-fixed": "#410006",
+                        "on-tertiary": "#670211"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Space Grotesk"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            font-size: 20px;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .neural-grid {
+            background-image: radial-gradient(circle at 1px 1px, rgba(5, 150, 105, 0.03) 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary/10 neural-grid min-h-screen">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl border-b border-neutral-200 shadow-sm">
+<div class="flex justify-between items-center px-6 h-16 w-full">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-emerald-600">sensors</span>
+<span class="font-['Space_Grotesk'] font-bold text-emerald-600 tracking-tighter text-lg">CENTRAL_DISTRICT_V01</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="font-['Inter'] uppercase tracking-widest text-[10px] font-semibold text-neutral-400">Node Sync: Active</span>
+<div class="h-8 w-8 rounded-full bg-neutral-100 border border-neutral-200 overflow-hidden">
+<img alt="Researcher profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANqelBcAui3Eg2hX6OubQCbk_RZTvLioqejTaGP5YF6bP0tvbSttBZlEqHdYG3_BiPpWixFQYNIxy9N6czB5CHkIf-OB1n9TjxYZUiWLmOkj20Vy5C_LyxFFrhQLMe5hKK4eaX2qlJR6alBow0vj0mRm4fSYCczK07NhtnCGjwWfyNV4upg0T8rKG_XQwQL668KrsAOcxFYGqqIVB-kjGVSOTev7MH-BgQDOvLoyMUpwg97yValCVmSt6PRoRyT7AN12eMWoiw8jIo"/>
+</div>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-5xl mx-auto space-y-8">
+<!-- Locality Status Card -->
+<section class="relative group">
+<div class="absolute -inset-1 bg-gradient-to-r from-emerald-500/5 to-transparent blur-2xl opacity-50"></div>
+<div class="relative bg-white rounded-xl p-8 border border-neutral-200 shadow-sm transition-all duration-300 group-hover:border-emerald-200">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+<div class="space-y-2">
+<p class="font-label text-[10px] uppercase tracking-[0.2em] text-emerald-600 font-bold">Regional Surveillance</p>
+<h1 class="text-3xl font-headline font-extrabold tracking-tight text-neutral-900">Your Locality (Pune): Stable</h1>
+<p class="text-on-surface-variant text-sm max-w-md leading-relaxed">Neural sensors report optimal baseline metrics across all sub-districts. No anomalies detected in current surveillance cycle.</p>
+</div>
+<div class="flex items-center gap-4 bg-neutral-50 p-4 rounded-xl border border-neutral-100">
+<div class="relative flex items-center justify-center">
+<div class="absolute w-12 h-12 bg-emerald-500/10 rounded-full animate-pulse"></div>
+<span class="material-symbols-outlined text-emerald-600 text-3xl" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+<div>
+<p class="font-label text-[10px] uppercase tracking-widest text-neutral-400 font-bold">Live Pulse</p>
+<p class="text-xl font-headline font-bold text-emerald-600">98.4%</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Predictive Info Grid (Bento Style) -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Weather Catalyst -->
+<div class="md:col-span-8 bg-white rounded-xl p-6 border border-neutral-200 group hover:border-emerald-500/20 transition-all duration-500 shadow-sm">
+<div class="flex justify-between items-start mb-8">
+<div class="space-y-1">
+<span class="font-label text-[10px] uppercase tracking-widest text-emerald-600 font-bold">Meteorological Input</span>
+<h3 class="text-xl font-headline font-bold text-neutral-900">Weather Catalyst</h3>
+</div>
+<span class="material-symbols-outlined text-neutral-300">cloud_done</span>
+</div>
+<div class="flex flex-col md:flex-row gap-8 items-end">
+<div class="flex-1 space-y-4">
+<div class="flex items-baseline gap-2">
+<span class="text-5xl font-headline font-extrabold tracking-tighter text-neutral-900">28°C</span>
+<span class="text-on-surface-variant text-sm uppercase font-label font-medium">Humid-Subtropical</span>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed">Elevated atmospheric moisture may trigger mild respiratory sensitivity. Recommendation: Maintain filtered internal air circulation.</p>
+</div>
+<div class="w-full md:w-48 h-24 bg-neutral-50 rounded-lg overflow-hidden relative border border-neutral-100">
+<div class="absolute inset-0 bg-gradient-to-t from-emerald-500/5 to-transparent"></div>
+<img alt="Cloud visualization" class="w-full h-full object-cover opacity-60 mix-blend-multiply" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4zThd05nHmsSe1I7Ke9sVBO5vXbKX8MA6PgG6l6fMwbRtzVsxzTKLwefO-VTMGrTFQVdmy5HVRTqW4rFWZAa6NbeWeQFHFni3EvI1I2cJ-LN3DXeBap9sp7azExD_EZJsFatVI8GcN6dceCiezZmXO4PlfQn-6Yn0umPyyJh8pl96E6_xLFpexv9_fOnli-IIQTFWKG-jYFY6rwMkJDtBUG_zCrBE1bSKHL2NLvcsFO8d-cC9KZOrd0j2lkghaU608GFGq8MP0FeA"/>
+</div>
+</div>
+</div>
+<!-- Pharmacy Trend -->
+<div class="md:col-span-4 bg-white rounded-xl p-6 border border-neutral-200 flex flex-col justify-between shadow-sm">
+<div>
+<div class="flex justify-between items-start mb-4">
+<span class="font-label text-[10px] uppercase tracking-widest text-amber-600 font-bold">Inventory Logic</span>
+<span class="material-symbols-outlined text-amber-600">medication</span>
+</div>
+<h3 class="text-xl font-headline font-bold mb-2 text-neutral-900">Pharmacy Trend</h3>
+<div class="space-y-3">
+<div class="flex justify-between text-xs font-label text-neutral-500">
+<span class="font-medium">Antipyretics</span>
+<span class="text-emerald-600 font-bold">+4.2%</span>
+</div>
+<div class="h-1 bg-neutral-100 rounded-full overflow-hidden">
+<div class="h-full bg-emerald-500 w-[65%]"></div>
+</div>
+<div class="flex justify-between text-xs font-label text-neutral-500">
+<span class="font-medium">Antihistamines</span>
+<span class="text-amber-600 font-bold">+12.8%</span>
+</div>
+<div class="h-1 bg-neutral-100 rounded-full overflow-hidden">
+<div class="h-full bg-amber-500 w-[82%]"></div>
+</div>
+</div>
+</div>
+<p class="mt-6 text-[10px] font-label text-neutral-400 uppercase font-bold">Trend Projection: High Demand</p>
+</div>
+<!-- Clinical Source -->
+<div class="md:col-span-4 bg-white rounded-xl p-6 border border-neutral-200 flex flex-col shadow-sm">
+<div class="flex justify-between items-start mb-6">
+<span class="font-label text-[10px] uppercase tracking-widest text-emerald-600 font-bold">Verified Node</span>
+<span class="material-symbols-outlined text-neutral-300">verified_user</span>
+</div>
+<h3 class="text-xl font-headline font-bold mb-4 text-neutral-900">Clinical Source</h3>
+<div class="flex-1 space-y-4">
+<div class="flex items-center gap-3 p-3 bg-neutral-50 rounded-lg border border-neutral-100">
+<div class="w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.3)]"></div>
+<span class="text-xs font-label uppercase font-bold text-neutral-600">Central Lab Pune-04</span>
+</div>
+<p class="text-xs text-on-surface-variant leading-relaxed">Incoming telemetry confirms 100% data fidelity from District-4 Clinical nodes. Zero latency in transmission.</p>
+</div>
+</div>
+<!-- Aggregate Neural Health -->
+<div class="md:col-span-8 bg-white rounded-xl p-6 border border-neutral-200 relative overflow-hidden shadow-sm">
+<div class="absolute right-0 top-0 w-1/2 h-full opacity-5 pointer-events-none">
+<img alt="Data Visualization" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnMC9LissGWeIAgJo6aCIznq2OZrvCqayzbXmeRVi_VabrIwpGdGYcysD4aM3m_LfQ4Xm-HymQZNzrv0tOWvVng_i8IMkYPe2CuxHoosx6TvNQDq3xD1DTgRmUmSXw8tL0cHPCypV-F26X0lzNDeJ7H6lSpR_rnwdafHZXkTsn8BgfhgIKtWpvgeLccN6JTLKkzssGSwTjde1ICr96hg9586-QR4wqdgJVvFRXngCQiohyUSmNn64W-frO33G1p2OqfE1ndrgsvRB0"/>
+</div>
+<div class="relative z-10">
+<span class="font-label text-[10px] uppercase tracking-widest text-emerald-600 font-bold">Long-Term Synthesis</span>
+<h3 class="text-xl font-headline font-bold mt-2 text-neutral-900">Aggregate Neural Health</h3>
+<div class="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="space-y-1">
+<p class="text-xs font-label text-neutral-400 uppercase font-bold">Sleep Index</p>
+<p class="text-lg font-headline font-bold text-neutral-900">84%</p>
+</div>
+<div class="space-y-1">
+<p class="text-xs font-label text-neutral-400 uppercase font-bold">Neural Load</p>
+<p class="text-lg font-headline font-bold text-neutral-900">12%</p>
+</div>
+<div class="space-y-1">
+<p class="text-xs font-label text-neutral-400 uppercase font-bold">Bio-Sync</p>
+<p class="text-lg font-headline font-bold text-emerald-600">Optimal</p>
+</div>
+<div class="space-y-1">
+<p class="text-xs font-label text-neutral-400 uppercase font-bold">Next Cycle</p>
+<p class="text-lg font-headline font-bold text-neutral-900">04:00</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 rounded-t-[0.75rem] bg-white/90 backdrop-blur-2xl shadow-[0_-4px_40px_rgba(0,0,0,0.04)]">
+<div class="flex justify-around items-center px-4 py-3 pb-safe w-full">
+<button class="flex flex-col items-center justify-center text-[#4ADE80] bg-[#4ADE80]/10 rounded-full w-12 h-12 transition-all duration-200">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-['Space_Grotesk'] uppercase text-[10px] tracking-widest mt-0 hidden">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center text-gray-400 hover:text-[#4ADE80] transition-colors">
+<span class="material-symbols-outlined">distance</span>
+<span class="font-['Space_Grotesk'] uppercase text-[10px] tracking-widest mt-1 hidden">Surround</span>
+</button>
+<button class="flex flex-col items-center justify-center text-gray-400 hover:text-[#4ADE80] transition-colors">
+<span class="material-symbols-outlined">notifications_active</span>
+<span class="font-['Space_Grotesk'] uppercase text-[10px] tracking-widest mt-1 hidden">Insights</span>
+</button>
+<button class="flex flex-col items-center justify-center text-gray-400 hover:text-[#4ADE80] transition-colors">
+<span class="material-symbols-outlined">person</span>
+<span class="font-['Space_Grotesk'] uppercase text-[10px] tracking-widest mt-1 hidden">Profile</span>
+</button>
+</div>
+</nav>
+<!-- Contextual FAB -->
+<div class="fixed bottom-24 right-6 z-40">
+<button class="w-14 h-14 text-white rounded-xl flex items-center justify-center shadow-lg active:scale-95 transition-all bg-[#4ADE80]">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">add</span>
+</button>
+</div>
+</body></html>
